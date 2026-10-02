@@ -1,0 +1,6 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' blob: 'wasm-unsafe-eval'; worker-src 'self' blob:; style-src 'self'; img-src 'self' blob: data:; media-src 'self' blob:; connect-src 'self' blob:; frame-ancestors https://show-champ.pages.dev http://localhost:5173 http://127.0.0.1:5173; base-uri 'self'; form-action 'self'
+/core/*
+  Cache-Control: public, max-age=86400

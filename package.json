@@ -1,0 +1,6 @@
+{
+ "name":"show-champ-converter","version":"1.0.0","private":true,"type":"module",
+ "scripts":{"dev":"vite --host 127.0.0.1","build":"node scripts/prepare-core.mjs && vite build","preview":"vite preview --host 127.0.0.1","test":"node --test tests/*.test.mjs"},
+ "dependencies":{"@ffmpeg/ffmpeg":"0.12.15","@ffmpeg/core":"0.12.10"},
+ "devDependencies":{"vite":"6.4.3"}
+}

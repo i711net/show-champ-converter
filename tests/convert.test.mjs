@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {argumentsFor,parentOrigin} from '../src/convert.js';
+test('conversion always selects H264 AAC and bounded clips',()=>{const args=argumentsFor({start:2,duration:30,quality:'standard'});assert.ok(args.includes('libx264'));assert.ok(args.includes('aac'));assert.ok(args.includes('44100'));assert.ok(args.includes('+faststart'));for(const options of [{start:-1,duration:10,quality:'clear'},{start:0,duration:61,quality:'small'},{start:0,duration:10,quality:'unknown'}])assert.throws(()=>argumentsFor(options));});
+test('parent message origins require the explicit allowlist',()=>{assert.equal(parentOrigin('https://show-champ.pages.dev'),'https://show-champ.pages.dev');assert.equal(parentOrigin('https://show-champ.pages.dev.evil.example'),null);assert.equal(parentOrigin('javascript:alert(1)'),null);});
